@@ -3,10 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Spa y Masajes - Turnos</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div>Hola soy Lucas</div>
-    <h1>hola</h1>
+    <header>
+        <h1>Spa y Masajes - Turnos</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Agende su turno</h2>
+            <form id="form-turno">
+                <label for="nombre">Nombre:</label><br>
+                <input type="text" id="nombre" name="nombre"><br><br>
+                
+                <label for="servicio">Servicio:</label><br>
+                <select id="servicio" name="servicio">
+                    <option value="masajes-spa">Masajes de Spa</option>
+                    <option value="descontracturantes">Masajes Descontracturantes</option>
+                    <option value="drenaje">Drenaje Linfático</option>
+                    <option value="limpieza-facial">Limpieza Facial</option>
+                </select><br><br>
+                
+                <label for="fecha">Fecha:</label><br>
+                <input type="date" id="fecha" name="fecha"><br><br>
+                
+                <button type="button" id="btn-agendar">Agendar</button>
+            </form>
+            <section id="lista-turnos">
+                <h3>Turnos Agendados</h3>
+                <ul id="turnos"></ul>
+            </section>
+        </section>
+        <section>
+            <h2>Nuestros Servicios</h2>
+            <ul>
+                <li>Masajes de Spa</li>
+                <li>Masajes Descontracturantes</li>
+                <li>Drenaje Linfático</li>
+                <li>Limpieza Facial</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>Contacto: +54..</p>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
