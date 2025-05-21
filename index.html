@@ -1,53 +1,229 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spa y Masajes - Turnos</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <header>
-        <h1>Spa y Masajes - Turnos</h1>
+    <!-- Sección Header -->
+    <header class="seccion-pantalla header">
+        <div class="contenido-centrado">
+            <div class="logo">
+                <h1><i class="fas fa-spa"></i> Spa y Masajes</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#reservas">Reservas</a></li>
+                    <li><a href="#testimonios">Testimonios</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <main>
-        <section>
-            <h2>Agende su turno</h2>
-            <form id="form-turno">
-                <label for="nombre">Nombre:</label><br>
-                <input type="text" id="nombre" name="nombre"><br><br>
-                
-                <label for="servicio">Servicio:</label><br>
-                <select id="servicio" name="servicio">
-                    <option value="masajes-spa">Masajes de Spa</option>
-                    <option value="descontracturantes">Masajes Descontracturantes</option>
-                    <option value="drenaje">Drenaje Linfático</option>
-                    <option value="limpieza-facial">Limpieza Facial</option>
-                </select><br><br>
-                
-                <label for="fecha">Fecha:</label><br>
-                <input type="date" id="fecha" name="fecha"><br><br>
-                
-                <button type="button" id="btn-agendar">Agendar</button>
-            </form>
-            <section id="lista-turnos">
-                <h3>Turnos Agendados</h3>
-                <ul id="turnos"></ul>
-            </section>
-        </section>
-        <section>
-            <h2>Nuestros Servicios</h2>
-            <ul>
-                <li>Masajes de Spa</li>
-                <li>Masajes Descontracturantes</li>
-                <li>Drenaje Linfático</li>
-                <li>Limpieza Facial</li>
-            </ul>
-        </section>
-    </main>
-    <footer>
-        <p>Contacto: +54..</p>
+
+    <!-- Sección Hero (Inicio) -->
+    <section class="seccion-pantalla hero" id="inicio">
+        <div class="contenido-centrado">
+            <div class="hero-content">
+                <h2>Encuentra tu momento de paz</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <a href="#reservas" class="btn-principal">Reserva ahora</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Servicios -->
+    <section class="seccion-pantalla servicios" id="servicios">
+        <div class="contenido-centrado">
+            <h2 class="titulo-seccion">Nuestros Servicios</h2>
+            <div class="servicios-grid">
+                <div class="tarjeta-servicio">
+                    <div class="icono-servicio">
+                        <i class="fas fa-hands"></i>
+                    </div>
+                    <h3>Masajes de Spa</h3>
+                    <p>Relajación profunda con aceites esenciales para combatir el estrés y la fatiga muscular.</p>
+                </div>
+                <div class="tarjeta-servicio">
+                    <div class="icono-servicio">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3>Masajes Descontracturantes</h3>
+                    <p>Tratamiento especializado para aliviar tensiones y dolores musculares crónicos.</p>
+                </div>
+                <div class="tarjeta-servicio">
+                    <div class="icono-servicio">
+                        <i class="fas fa-tint"></i>
+                    </div>
+                    <h3>Drenaje Linfático</h3>
+                    <p>Técnica suave para eliminar toxinas, reducir inflamación y mejorar la circulación.</p>
+                </div>
+                <div class="tarjeta-servicio">
+                    <div class="icono-servicio">
+                        <i class="fas fa-smile"></i>
+                    </div>
+                    <h3>Limpieza Facial</h3>
+                    <p>Tratamiento completo para revitalizar la piel, eliminar impurezas y rejuvenecer el rostro.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Reservas -->
+    <section class="seccion-pantalla reservas" id="reservas">
+        <div class="contenido-centrado">
+            <h2 class="titulo-seccion">Agenda tu visita</h2>
+            <div class="reservas-grid">
+                <div class="formulario-reserva">
+                    <form id="form-turno">
+                        <div class="campo-formulario">
+                            <label for="nombre">Nombre completo:</label>
+                            <input type="text" id="nombre" name="nombre" required>
+                        </div>
+                        
+                        <div class="campo-formulario">
+                            <label for="email">Correo electrónico:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="campo-formulario">
+                            <label for="telefono">Teléfono:</label>
+                            <input type="tel" id="telefono" name="telefono">
+                        </div>
+                        
+                        <div class="campo-formulario">
+                            <label for="servicio">Servicio:</label>
+                            <select id="servicio" name="servicio">
+                                <option value="">Selecciona un servicio</option>
+                                <option value="masajes-spa">Masajes de Spa</option>
+                                <option value="descontracturantes">Masajes Descontracturantes</option>
+                                <option value="drenaje">Drenaje Linfático</option>
+                                <option value="limpieza-facial">Limpieza Facial</option>
+                            </select>
+                        </div>
+                        
+                        <div class="campo-formulario">
+                            <label for="fecha">Fecha:</label>
+                            <input type="date" id="fecha" name="fecha">
+                        </div>
+                        
+                        <div class="campo-formulario">
+                            <label for="hora">Hora:</label>
+                            <select id="hora" name="hora">
+                                <option value="">Selecciona una hora</option>
+                                <option value="09:00">09:00</option>
+                                <option value="10:00">10:00</option>
+                                <option value="11:00">11:00</option>
+                                <option value="12:00">12:00</option>
+                                <option value="16:00">16:00</option>
+                                <option value="17:00">17:00</option>
+                                <option value="18:00">18:00</option>
+                            </select>
+                        </div>
+                        
+                        <button type="button" id="btn-agendar" class="btn-principal">Agendar turno</button>
+                    </form>
+                </div>
+                <div class="turnos-container">
+                    <div class="turnos-header">
+                        <h3>Turnos Agendados</h3>
+                    </div>
+                    <ul id="turnos" class="lista-turnos"></ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Testimonios -->
+    <section class="seccion-pantalla testimonios" id="testimonios">
+        <div class="contenido-centrado">
+            <h2 class="titulo-seccion">Lo que dicen nuestros clientes</h2>
+            <div class="testimonios-container">
+                <div class="testimonio">
+                    <div class="testimonio-texto">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+                    </div>
+                    <div class="testimonio-autor">
+                        <h4>María Gómez</h4>
+                        <p>Cliente desde 2022</p>
+                    </div>
+                </div>
+                <div class="testimonio">
+                    <div class="testimonio-texto">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+                    </div>
+                    <div class="testimonio-autor">
+                        <h4>Juan Pérez</h4>
+                        <p>Cliente desde 2023</p>
+                    </div>
+                </div>
+                <div class="testimonio">
+                    <div class="testimonio-texto">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+                    </div>
+                    <div class="testimonio-autor">
+                        <h4>Laura Martínez</h4>
+                        <p>Cliente desde 2021</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Contacto -->
+    <section class="seccion-pantalla contacto" id="contacto">
+        <div class="contenido-centrado">
+            <h2 class="titulo-seccion">Contacto</h2>
+            <div class="contacto-grid">
+                <div class="info-contacto">
+                    <div class="contacto-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Av. Corrientes 1234, Buenos Aires</p>
+                    </div>
+                    <div class="contacto-item">
+                        <i class="fas fa-phone"></i>
+                        <p>+54 11 5555-5555</p>
+                    </div>
+                    <div class="contacto-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>info@spamasajes.com</p>
+                    </div>
+                    <div class="contacto-item">
+                        <i class="fas fa-clock"></i>
+                        <p>Lunes a Sábado: 9:00 - 20:00</p>
+                    </div>
+                    <div class="redes-sociales">
+                        <a href="#" class="red-social"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="red-social"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="red-social"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="mapa-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.016887889469!2d-58.38375908425339!3d-34.603738880459576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccac630121623%3A0x53386f2ac88991a9!2sAv.%20Corrientes%2C%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1656543789132!5m2!1ses-419!2sar" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="seccion-footer" id="footer">
+        <div class="contenido-centrado">
+            <div class="footer-contenido">
+                <div class="footer-logo">
+                    <h3><i class="fas fa-spa"></i> Spa y Masajes</h3>
+                </div>
+                <div class="footer-derechos">
+                    <p>&copy; 2025 Spa y Masajes. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
