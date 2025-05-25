@@ -1,194 +1,319 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Lato:wght@400;500&display=swap');
 
 body {
     background-color: #F5ECE5;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Lato', sans-serif;
     color: #4A704F;
     margin: 0;
     padding: 0;
     line-height: 1.6;
+    padding-top: 70px;
 }
 
-header {
+.seccion-pantalla {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 40px 0;
+}
+
+.navbar {
     background-color: #A3BFFA;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #4A704F;
+}
+
+.nav-link {
+    color: #4A704F !important;
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    color: #6D8299 !important;
+}
+
+.hero {
+    background: linear-gradient(135deg, #F5ECE5 0%, #A3BFFA 100%);
     text-align: center;
-    padding: 20px;
 }
 
-header h1 {
-    font-family: 'Playfair Display', serif;
+.hero h1 {
+    font-family: 'Cormorant Garamond', serif;
     font-size: 3rem;
-    margin: 0 0 15px 0;
+    font-weight: 600;
     color: #6D8299;
+    margin-bottom: 20px;
 }
 
-nav {
-    position: sticky;
-    top: 0;
-    background-color: #A3BFFA;
-    padding: 10px 0;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-nav ul li {
-    padding: 0;
-}
-
-nav ul li a {
-    text-decoration: none;
+.hero .lead {
     color: #4A704F;
-    font-weight: 500;
-    font-size: 1.1rem;
-    padding: 8px 15px;
-    border-radius: 5px;
+    margin-bottom: 30px;
 }
 
-nav ul li a:hover {
+.btn-primary {
     background-color: #D4A373;
-    color: #F5ECE5;
-}
-
-main {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 30px;
-    padding: 30px 20px;
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-section {
-    background-color: #F5ECE5;
-    padding: 25px;
-    border-radius: 12px;
-    border: 2px solid #D4A373;
-}
-
-h2, h3 {
-    font-family: 'Playfair Display', serif;
-    margin-top: 0;
-    color: #6D8299;
-}
-
-#form-turno {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    background-color: #F5ECE5;
-    padding: 20px;
-    border-radius: 8px;
-    border: 2px solid #D4A373;
-}
-
-label {
+    border-color: #D4A373;
+    border-radius: 25px;
+    padding: 12px 30px;
     font-weight: 500;
-    color: #4A704F;
 }
 
-input, select {
-    padding: 10px;
-    border: 2px solid #D4A373;
-    border-radius: 6px;
-    font-size: 1rem;
+.btn-primary:hover {
+    background-color: #E0B898;
+    border-color: #E0B898;
+}
+
+.btn-secondary {
+    background-color: #6D8299;
+    border-color: #6D8299;
+    border-radius: 25px;
+}
+
+.servicios {
     background-color: #FFFFFF;
 }
 
-input:focus, select:focus {
-    border-color: #6D8299;
+.reservas {
+    background: linear-gradient(135deg, #A3BFFA 0%, #F5ECE5 100%);
 }
 
-button#btn-agendar {
-    background-color: #D4A373;
-    color: #F5ECE5;
-    padding: 12px;
+.testimonios {
+    background-color: #FFFFFF;
+}
+
+.contacto {
+    background: linear-gradient(135deg, #F5ECE5 0%, #A3BFFA 100%);
+}
+
+h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    color: #6D8299;
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-family: 'Cormorant Garamond', serif;
+    color: #4A704F;
+}
+
+.card {
     border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 1.1rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.icono-servicio {
+    font-size: 3rem;
+    color: #D4A373;
+    margin-bottom: 20px;
+}
+
+.form-control, .form-select {
+    border: 2px solid #D4A373;
+    border-radius: 8px;
+    padding: 12px 15px;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #6D8299;
+    box-shadow: 0 0 0 0.2rem rgba(109, 130, 153, 0.25);
+}
+
+.form-label {
     font-weight: 500;
+    color: #4A704F;
 }
 
-button#btn-agendar:hover {
-    background-color: #E0B898;
+.turnos-container {
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
-ul {
+.turnos-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #F5ECE5;
+}
+
+.lista-turnos {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
-ul li {
-    padding: 8px 0;
-    position: relative;
-    padding-left: 25px;
+.turno-item {
+    background-color: #F5ECE5;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border-left: 4px solid #D4A373;
 }
 
-ul li:before {
-    position: absolute;
-    left: 0;
+.turno-nombre {
+    font-weight: 600;
+    color: #4A704F;
+    margin-bottom: 5px;
+}
+
+.turno-detalles {
+    color: #6D8299;
+    font-size: 0.9rem;
+    margin: 3px 0;
+}
+
+.turno-acciones {
+    margin-top: 10px;
+}
+
+.btn-editar, .btn-eliminar {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    margin-right: 5px;
+}
+
+.btn-editar {
+    background-color: #A3BFFA;
+    color: #4A704F;
+}
+
+.btn-eliminar {
+    background-color: #ff6b6b;
+    color: white;
+}
+
+.testimonio {
+    background-color: #F5ECE5;
+    padding: 30px;
+    border-radius: 15px;
+    border: 2px solid #D4A373;
+    text-align: center;
+    height: 100%;
+}
+
+.testimonio-autor h4 {
+    color: #4A704F;
+    margin-bottom: 5px;
+}
+
+.info-contacto {
+    background-color: #FFFFFF;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.contacto-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #F5ECE5;
+    border-radius: 10px;
+}
+
+.contacto-item i {
+    font-size: 1.5rem;
     color: #D4A373;
+    margin-right: 15px;
+    width: 30px;
+}
+
+.redes-sociales {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.red-social {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: #D4A373;
+    color: white;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.red-social:hover {
+    background-color: #4A704F;
+    color: white;
+}
+
+.mapa-container {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 footer {
-    background-color: #6D8299;
-    text-align: center;
-    padding: 15px;
-    margin-top: 40px;
+    background-color: #6D8299 !important;
 }
 
-footer p {
-    margin: 0;
+footer h5 {
+    font-family: 'Cormorant Garamond', serif;
     color: #F5ECE5;
-    font-size: 0.9rem;
 }
 
-/* Responsividad */
-@media (max-width: 600px) {
-    header h1 {
+@media (max-width: 768px) {
+    .seccion-pantalla {
+        min-height: auto;
+        padding: 60px 0;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    h2 {
         font-size: 2rem;
     }
-
-    nav ul {
-        gap: 10px;
+    
+    .turno-acciones {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
     }
-
-    nav ul li a {
-        font-size: 0.9rem;
-        padding: 6px 10px;
-    }
-
-    main {
-        padding: 15px;
-        gap: 20px;
-    }
-
-    section {
-        padding: 15px;
-    }
-
-    #form-turno {
-        padding: 15px;
-    }
-
-    input, select, button {
+    
+    .btn-editar, .btn-eliminar {
         width: 100%;
-        box-sizing: border-box;
-        font-size: 0.9rem;
+        margin-right: 0;
     }
+}
 
+@media (max-width: 576px) {
+    body {
+        padding-top: 60px;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
     h2 {
-        font-size: 1.5rem;
-    }
-
-    h3 {
-        font-size: 1.2rem;
+        font-size: 1.8rem;
     }
 }
