@@ -118,6 +118,10 @@ body {
     background-color: #F0F8F0;
 }
 
+.contacto .row {
+    align-items: stretch;
+}
+
 h2 {
     font-family: 'Cormorant Garamond', serif;
     font-weight: 600;
@@ -139,6 +143,14 @@ h3 {
 
 .card:hover {
     transform: translateY(-5px);
+}
+
+.card-title {
+    color: #4A704F;
+}
+
+.card-text {
+    color: #6D8299;
 }
 
 .servicio-img {
@@ -169,11 +181,20 @@ h3 {
     color: #4A704F;
 }
 
+.form-container {
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    height: fit-content;
+}
+
 .turnos-container {
     background-color: #FFFFFF;
     border-radius: 15px;
     padding: 20px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    height: fit-content;
 }
 
 .turnos-header {
@@ -262,6 +283,7 @@ h3 {
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    height: 100%;
 }
 
 .contacto-item {
@@ -308,6 +330,12 @@ h3 {
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    height: 100%;
+}
+
+.mapa-container iframe {
+    height: 100%;
+    width: 100%;
 }
 
 footer {
@@ -357,6 +385,19 @@ footer h5 {
         width: 100%;
         margin-right: 0;
     }
+
+    .contacto .row {
+        align-items: flex-start;
+    }
+
+    .info-contacto,
+    .mapa-container {
+        height: auto;
+    }
+
+    .mapa-container iframe {
+        height: 300px;
+    }
 }
 
 @media (max-width: 576px) {
@@ -379,5 +420,9 @@ footer h5 {
     
     .servicio-img {
         height: 160px;
+    }
+
+    .mapa-container iframe {
+        height: 250px;
     }
 }

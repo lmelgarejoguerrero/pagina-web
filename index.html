@@ -109,64 +109,66 @@
             <h2 class="text-center mb-5">Agendá tu visita</h2>
             <div class="row">
                 <div class="col-lg-6">
-                    <form id="form-turno">
-                        <div class="mb-3">
-                            <label for="nombre" class="form-label">Nombre completo:</label>
-                            <input type="text" class="form-control" id="nombre" name="nombre" required>
-                        </div>
-                        
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Correo electrónico:</label>
-                            <input type="email" class="form-control" id="email" name="email" required>
-                        </div>
-                        
-                        <div class="mb-3">
-                            <label for="telefono" class="form-label">Teléfono:</label>
-                            <input type="tel" class="form-control" id="telefono" name="telefono">
-                        </div>
-                        
-                        <div class="mb-3">
-                            <label for="servicio" class="form-label">Servicio:</label>
-                            <select class="form-select" id="servicio" name="servicio" required>
-                                <option value="">Selecciona un servicio</option>
-                                <option value="Masajes de Spa">Masajes de Spa</option>
-                                <option value="Masajes Descontracturantes">Masajes Descontracturantes</option>
-                                <option value="Drenaje Linfático">Drenaje Linfático</option>
-                                <option value="Limpieza Facial">Limpieza Facial</option>
-                            </select>
-                        </div>
-                        
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="mb-3">
-                                    <label for="fecha" class="form-label">Fecha:</label>
-                                    <input type="date" class="form-control" id="fecha" name="fecha" required>
+                    <div class="form-container">
+                        <form id="form-turno">
+                            <div class="mb-3">
+                                <label for="nombre" class="form-label">Nombre completo:</label>
+                                <input type="text" class="form-control" id="nombre" name="nombre" required>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Correo electrónico:</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="telefono" class="form-label">Teléfono:</label>
+                                <input type="tel" class="form-control" id="telefono" name="telefono">
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="servicio" class="form-label">Servicio:</label>
+                                <select class="form-select" id="servicio" name="servicio" required>
+                                    <option value="">Selecciona un servicio</option>
+                                    <option value="Masajes de Spa">Masajes de Spa</option>
+                                    <option value="Masajes Descontracturantes">Masajes Descontracturantes</option>
+                                    <option value="Drenaje Linfático">Drenaje Linfático</option>
+                                    <option value="Limpieza Facial">Limpieza Facial</option>
+                                </select>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="fecha" class="form-label">Fecha:</label>
+                                        <input type="date" class="form-control" id="fecha" name="fecha" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="hora" class="form-label">Hora:</label>
+                                        <select class="form-select" id="hora" name="hora" required>
+                                            <option value="">Selecciona una hora</option>
+                                            <option value="09:00">09:00</option>
+                                            <option value="10:00">10:00</option>
+                                            <option value="11:00">11:00</option>
+                                            <option value="12:00">12:00</option>
+                                            <option value="16:00">16:00</option>
+                                            <option value="17:00">17:00</option>
+                                            <option value="18:00">18:00</option>
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-md-6">
-                                <div class="mb-3">
-                                    <label for="hora" class="form-label">Hora:</label>
-                                    <select class="form-select" id="hora" name="hora" required>
-                                        <option value="">Selecciona una hora</option>
-                                        <option value="09:00">09:00</option>
-                                        <option value="10:00">10:00</option>
-                                        <option value="11:00">11:00</option>
-                                        <option value="12:00">12:00</option>
-                                        <option value="16:00">16:00</option>
-                                        <option value="17:00">17:00</option>
-                                        <option value="18:00">18:00</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <button type="submit" id="btn-agendar" class="btn btn-primary w-100">
-                            <span id="btn-texto">Agendar turno</span>
-                        </button>
-                        <button type="button" id="btn-cancelar" class="btn btn-secondary w-100 mt-2" style="display: none;">
-                            Cancelar edición
-                        </button>
-                    </form>
+                            
+                            <button type="submit" id="btn-agendar" class="btn btn-primary w-100">
+                                <span id="btn-texto">Agendar turno</span>
+                            </button>
+                            <button type="button" id="btn-cancelar" class="btn btn-secondary w-100 mt-2" style="display: none;">
+                                Cancelar edición
+                            </button>
+                        </form>
+                    </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="turnos-container">
