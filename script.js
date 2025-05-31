@@ -76,6 +76,27 @@ function agendarTurno(event) {
         return;
     }
 
+    if (!email.includes('@') || !email.includes('.')) {
+        alert('Por favor, ingresá un email válido');
+        return;
+    }
+
+    const hoy = new Date();
+    const fechaSeleccionada = new Date(fecha);
+    if (fechaSeleccionada < hoy) {
+        alert('No podés agendar turnos en fechas pasadas');
+        return;
+    }
+
+    for (let i = 0; i < turnos.length; i++) {
+        if (i === editandoIndex) continue;
+        const turnoExistente = turnos[i];
+        if (turnoExistente.servicio === servicio && turnoExistente.fecha === fecha && turnoExistente.hora === hora) {
+            alert('Ya existe un turno para ese servicio en esa fecha y hora');
+            return;
+        }
+    }
+
     const turno = {
         nombre: nombre,
         email: email,
@@ -125,7 +146,7 @@ function cancelarEdicion() {
 function eliminarTurno(index) {
     const turno = turnos[index];
     
-    if (confirm('¿Estás seguro de eliminar el turno de ' + turno.nombre + '?')) {
+    if (confirm('¿Estás seguro de eliminar el turno de ' + turno.servicio + '?')) {
         turnos.splice(index, 1);
         localStorage.setItem('turnos', JSON.stringify(turnos));
         mostrarTurnos();
