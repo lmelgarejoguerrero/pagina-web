@@ -108,6 +108,7 @@ body {
 
 .reservas {
     background-color: #F5F5F0;
+    padding: 80px 0;
 }
 
 .testimonios {
@@ -397,6 +398,10 @@ footer h5 {
 
     .mapa-container iframe {
         height: 300px;
+    }
+
+    .reservas .col-lg-6:first-child {
+        margin-bottom: 30px;
     }
 }
 
