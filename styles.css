@@ -1,5 +1,92 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Lato:wght@400;500&display=swap');
 
+@media (max-width: 768px) {
+    .seccion-pantalla {
+        min-height: auto;
+        padding: 60px 0;
+    }
+    
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-image-container {
+        max-width: 400px;
+        aspect-ratio: 4 / 3;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+    
+    .servicio-img {
+        height: 180px;
+    }
+    
+    .testimonio-foto {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .turno-acciones {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .btn-editar, .btn-eliminar {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .contacto .row {
+        align-items: flex-start;
+    }
+
+    .info-contacto,
+    .mapa-container {
+        height: auto;
+    }
+
+    .mapa-container iframe {
+        height: 300px;
+    }
+
+    .reservas .col-lg-6:first-child {
+        margin-bottom: 30px;
+    }
+    .contacto .col-lg-6:first-child {
+    margin-bottom: 30px;
+}
+}
+
+@media (max-width: 576px) {
+    body {
+        padding-top: 60px;
+    }
+    
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-image-container {
+        max-width: 320px;
+        aspect-ratio: 4 / 3;
+    }
+    
+    h2 {
+        font-size: 1.8rem;
+    }
+    
+    .servicio-img {
+        height: 160px;
+    }
+
+    .mapa-container iframe {
+        height: 250px;
+    }
+}
+
 body {
     background-color: #F5ECE5;
     font-family: 'Lato', sans-serif;
@@ -83,23 +170,37 @@ body {
     border-radius: 15px;
 }
 
-.btn-primary {
+.btn-principal {
     background-color: #D4A373;
     border-color: #D4A373;
     border-radius: 25px;
     padding: 12px 30px;
     font-weight: 500;
+    color: white;
 }
 
-.btn-primary:hover {
+.btn-principal:hover {
     background-color: #E0B898;
     border-color: #E0B898;
+    color: white;
 }
 
-.btn-secondary {
+.btn-secundario {
     background-color: #6D8299;
     border-color: #6D8299;
     border-radius: 25px;
+    color: white;
+}
+
+.btn-secundario:hover {
+    background-color: #4A704F;
+    border-color: #4A704F;
+    color: white;
+}
+
+.bg-principal {
+    background-color: #D4A373 !important;
+    color: #fff !important;
 }
 
 .servicios {
@@ -346,88 +447,4 @@ footer {
 footer h5 {
     font-family: 'Cormorant Garamond', serif;
     color: #F5ECE5;
-}
-
-@media (max-width: 768px) {
-    .seccion-pantalla {
-        min-height: auto;
-        padding: 60px 0;
-    }
-    
-    .hero-text h1 {
-        font-size: 2.5rem;
-    }
-    
-    .hero-image-container {
-        max-width: 400px;
-        aspect-ratio: 4 / 3;
-    }
-    
-    h2 {
-        font-size: 2rem;
-    }
-    
-    .servicio-img {
-        height: 180px;
-    }
-    
-    .testimonio-foto {
-        width: 60px;
-        height: 60px;
-    }
-    
-    .turno-acciones {
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-    }
-    
-    .btn-editar, .btn-eliminar {
-        width: 100%;
-        margin-right: 0;
-    }
-
-    .contacto .row {
-        align-items: flex-start;
-    }
-
-    .info-contacto,
-    .mapa-container {
-        height: auto;
-    }
-
-    .mapa-container iframe {
-        height: 300px;
-    }
-
-    .reservas .col-lg-6:first-child {
-        margin-bottom: 30px;
-    }
-}
-
-@media (max-width: 576px) {
-    body {
-        padding-top: 60px;
-    }
-    
-    .hero-text h1 {
-        font-size: 2rem;
-    }
-    
-    .hero-image-container {
-        max-width: 320px;
-        aspect-ratio: 4 / 3;
-    }
-    
-    h2 {
-        font-size: 1.8rem;
-    }
-    
-    .servicio-img {
-        height: 160px;
-    }
-
-    .mapa-container iframe {
-        height: 250px;
-    }
 }
