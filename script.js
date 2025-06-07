@@ -65,13 +65,13 @@ function agendarTurno(event) {
     event.preventDefault();
     
     const nombre = document.getElementById('nombre').value;
-    const email = document.getElementById('email').value;
+    const email = document.getElementById('e-mail').value;
     const telefono = document.getElementById('telefono').value;
     const servicio = document.getElementById('servicio').value;
     const fecha = document.getElementById('fecha').value;
     const hora = document.getElementById('hora').value;
 
-    if (!nombre || !email || !servicio || !fecha || !hora) {
+    if (!nombre || !email || !servicio || !fecha || !hora || !telefono) {
         alert('Por favor, completá todos los campos obligatorios');
         return;
     }
@@ -80,6 +80,24 @@ function agendarTurno(event) {
         alert('Por favor, ingresá un email válido');
         return;
     }
+
+    if (telefono) {
+    let soloNumeros = true
+    for (let i = 0; i < telefono.length; i++) {
+        if (telefono[i] < "0" || telefono[i] > "9") {
+        soloNumeros = false
+        break
+        }
+    }
+    if (telefono.length < 7) {
+        alert("El teléfono debe tener una longitud mayor a 7");
+        return;
+    }
+    if (!soloNumeros) {
+        alert("El teléfono debe contener solo números")
+        return
+        }
+}
 
     const hoy = new Date();
     const fechaSeleccionada = new Date(fecha);
@@ -125,7 +143,7 @@ function editarTurno(index) {
     const turno = turnos[index];
     
     document.getElementById('nombre').value = turno.nombre;
-    document.getElementById('email').value = turno.email;
+    document.getElementById('e-mail').value = turno.email;
     document.getElementById('telefono').value = turno.telefono;
     document.getElementById('servicio').value = turno.servicio;
     document.getElementById('fecha').value = turno.fecha;
@@ -146,7 +164,7 @@ function cancelarEdicion() {
 function eliminarTurno(index) {
     const turno = turnos[index];
     
-    if (confirm('¿Estás seguro de eliminar el turno de ' + turno.servicio + '?')) {
+    if (confirm('¿Estás seguro de eliminar el turno de ' + turno.servicio + ' para la fecha ' + turno.fecha + ' ?')) {
         turnos.splice(index, 1);
         localStorage.setItem('turnos', JSON.stringify(turnos));
         mostrarTurnos();
